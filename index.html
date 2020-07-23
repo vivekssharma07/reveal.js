@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/beige.css" id="theme" />
+    <link rel="stylesheet" href="dist/theme/serif.css" id="theme" />
 
     <!-- Theme used for syntax highlighted code -->
     <link
@@ -22,29 +22,44 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides">
-        <section data-auto-animate data-background-color="rgb(96 162 206)">
-          <h1 style="margin-top: 100px;">Auto</h1>
-          <h1 style="opacity: 0;">Animate</h1>
+      <div class="slides" style="background-color: #dedede;">
+        <section>
+          <h5 style="top: 100px;">Video Demo</h5>
+          <div>
+            <video width="900" height="500"
+            data-autoplay
+            src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+          ></video>
+          </div>
+          <!-- <div>
+            <iframe width="900" height="500" src="https://www.youtube.com/embed/owsfdh4gxyc" frameborder="0" allowfullscreen></iframe>
+          </div> -->
+          <div class="mb-5">
+            <span style="color: black;font-size: 30px;">Presentation behavior can be fine-tuned using a wide array of
+              configuration options. These objects can be included where you
+              initialize reveal.js. It's also possible to change config values
+              at runtime.
+              Reveal.js can automatically animate elements across slides. All you need to do is add data-auto-animate to two adjacent slide elements and Auto-Animate will animate all matching elements between the two.</span>
+          </div>
         </section>
         <section data-auto-animate>
-          <h1>Auto</h1>
-          <h1>Animate</h1>
+          <h3>Sample Layout</h3>
+          <div>
+            <span style="color: black;"
+              >Presentation behavior can be fine-tuned using a wide array of
+              configuration options. These objects can be included where you
+              initialize reveal.js. It's also possible to change config values
+              at runtime.You can override specific animation settings such as easing and duration either for the whole presentation, per-slide or individually for each animated element. The following configuration attributes can be used to change the settings for a specific slide or element:</span>
+            <div>
+              <img
+                src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920.jpg"
+                alt="Flat Icon"
+                width="250"
+                height="350"
+              />
+            </div>
+          </div>
         </section>
-		<section>
-			<video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
-		</section>
-		<section data-markdown data-transition="zoom">
-			<textarea data-template>
-				```js [1-2|3|4]
-				let a = 1;
-				let b = 2;
-				let c = x => 1 + 2 + x;
-				c(3);
-				```
-			  </textarea
-			>
-		  </section>
       </div>
     </div>
 
@@ -57,10 +72,12 @@
       // - https://revealjs.com/initialization/
       // - https://revealjs.com/config/
       Reveal.initialize({
-        hash: true,
+        //hash: true,
         width: 1063,
-        height: 1075,
+        height: 1375,
         slideNumber: true,
+        centre: true,
+        display: "block",
         //autoSlide: 3000,
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
